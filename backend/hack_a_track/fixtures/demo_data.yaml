@@ -1,0 +1,93 @@
+- model: auth.user
+  pk: 1
+  fields:
+    # root
+    password: pbkdf2_sha256$260000$upshbLPi5LTPAvwKkNujc5$IGvcVtQ7W1+KSVcaBKLtD9Fh6qCl5F/Zg6rpFBlQIgM=
+    last_login: 2021-04-30 14:26:07.049410+00:00
+    is_superuser: true
+    username: root
+    first_name: ''
+    last_name: ''
+    email: ''
+    is_staff: true
+    is_active: true
+    date_joined: 2021-04-30 14:25:57.658666+00:00
+    groups: []
+    user_permissions: []
+- model: auth.user
+  pk: 2
+  fields:
+    # Password1!
+    password: pbkdf2_sha256$260000$L1sbs4Y6SWAt17H6jEZNae$/0Kqqz/vNkaWJ25VJJvbkQarUi88/VcIeo+z61ioToM=
+    last_login: null
+    is_superuser: false
+    username: demo_user
+    first_name: ''
+    last_name: ''
+    email: ''
+    is_staff: false
+    is_active: true
+    date_joined: 2021-04-30 14:30:26.770291+00:00
+    groups: []
+    user_permissions: []
+- model: hack_a_track.competition
+  pk: 1
+  fields:
+    name: Demo Competition
+    is_active: true
+    start_time: 2021-04-30 14:31:18+00:00
+    end_time: 2021-05-01 14:31:18+00:00
+- model: hack_a_track.stage
+  pk: 1
+  fields:
+    number: 0
+    name: Demo Stage
+    description: First demo stage
+    competition: 1
+- model: hack_a_track.stage
+  pk: 2
+  fields:
+    number: 1
+    name: Demo Second Stage
+    description: Second demo stage
+    competition: 1
+    secret_code: secret1
+- model: hack_a_track.stage
+  pk: 3
+  fields:
+    number: 2
+    name: Demo Final Stage
+    description: Final demo stage
+    competition: 1
+    secret_code: secret2
+- model: hack_a_track.stageinstance
+  pk: 1
+  fields:
+    stage: 1
+    finished: false
+    number_of_attempts: 0
+    group: 1
+- model: hack_a_track.stageinstance
+  pk: 2
+  fields:
+    stage: 1
+    finished: false
+    number_of_attempts: 0
+    group: 2
+- model: hack_a_track.group
+  pk: 1
+  fields:
+    name: Demo Group
+    competition: 1
+- model: hack_a_track.group
+  pk: 2
+  fields:
+    name: Demo Second Group
+    competition: 1
+- model: hack_a_track.participant
+  pk: 1
+  fields:
+    first_name: Demo
+    last_name: Participant
+    user: 2
+    group: 1
